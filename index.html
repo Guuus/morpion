@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>TIC-TAC-TOE</title>
+	</head>
+	<body>
+		<h1>TIC-TAC-TOE</h1>
+		<p>
+			Player 1 : <b>O</b><br>
+			Player 2 : <b>X</b>
+		</p>
+		<p id="player"></p>
+		<div class="tictactoe">
+			<div class="line">
+				<div id="1" class="case"></i></div><div id="2" class="case"></div><div id="3" class="case"></div>
+			</div>
+			<div class="line">
+				<div id="4" class="case"></div><div id="5" class="case"></div><div id="6" class="case"></div>
+			</div>
+			<div class="line">
+				<div id="7" class="case"></div><div id="8" class="case"></div><div id="9" class="case"></div>
+			</div>
+		</div>
+	
+		<div id="win-popup">
+			<h2>Well played !</h2>
+			<p>Player <span id="winner"></span> won !</p>
+			<a href="">Play again</a>
+		</div>
+
+		<div id="equality-popup">
+			<h2>Equality :(</h2>
+			<p>Neither of you won</p>
+			<a href="">Play again</a>
+		</div>
+
+		<script src="js/morpion.js"></script>
+	</body>
+</html>
