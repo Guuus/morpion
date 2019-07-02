@@ -14,11 +14,11 @@ function click(e) {
         if (player === "O") {
             e.target.textContent = "O";
             player = "X"
-            document.getElementById("player").textContent = "It's up to player 1 to play";
+            document.getElementById("player").textContent = "It's up to player 2 to play";
         } else if (player === "X") {
             e.target.textContent = "X";
             player = "O";
-            document.getElementById("player").textContent = "It's up to player 2 to play";
+            document.getElementById("player").textContent = "It's up to player 1 to play";
         }
     }
     checkWin();
