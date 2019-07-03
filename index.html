@@ -8,8 +8,8 @@
 	<body>
 		<h1>TIC-TAC-TOE</h1>
 		<p>
-			Player 1 : <b>O</b><br>
-			Player 2 : <b>X</b>
+			Player 1 : <b>O</b> <span id="p1"></span><br>
+			Player 2 : <b>X</b> <span id="p2"></span>
 		</p>
 		<p id="player"></p>
 		<div class="tictactoe">
@@ -26,16 +26,29 @@
 	
 		<div id="win-popup" class="popup">
 			<h2>Well played !</h2>
-			<p>Player <span id="winner"></span> won !</p>
-			<a href="">Play again</a>
+			<p>You won the game !</p>
+			<a class="play-again" href="">Play again</a>
+		</div>
+
+		<div id="loose-popup" class="popup">
+			<h2>Try again :/</h2>
+			<p>You lost the game !</p>
+			<a class="play-again" href="">Play again</a>
 		</div>
 
 		<div id="equality-popup" class="popup">
 			<h2>Equality :(</h2>
 			<p>Neither of you won</p>
-			<a href="">Play again</a>
+			<a class="play-again" href="">Play again</a>
 		</div>
 
-		<script src="js/morpion.js"></script>
+		<div id="replay-popup" class="popup">
+			<h2>Hey !</h2>
+			<p>The opponant wants to take his revenge</p>
+			<a class="accept-replay" href="">Accept</a>
+		</div>
+
+		<script src="http://localhost:8080/socket.io/socket.io.js"></script>
+		<script src="js/client.js"></script>
 	</body>
 </html>
