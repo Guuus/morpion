@@ -2,8 +2,8 @@
 A multi-mode tic-tac-toe game made in JavaScript.
 
 There is two game modes :
- - [Offline mode](https://github.com/Guuus/tic-tac-toe/offline/) : two players can play but on the same computer.
- - [Online mode](https://github.com/Guuus/tic-tac-toe/online/) : two players can play from different devices like computer, tablet or smartphone.
+ - [Offline mode](https://github.com/Guuus/tic-tac-toe/tree/master/offline) : two players can play but on the same computer.
+ - [Online mode](https://github.com/Guuus/tic-tac-toe/tree/master/online) : two players can play from different devices like computer, tablet or smartphone.
 
 ## Install
 First, clone the project by copying the command `git clone https://github.com/Guuus/tic-tac-toe.git`.
