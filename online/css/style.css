@@ -87,3 +87,20 @@ p {
 #loose-popup a { background-color: #cb4335; border-bottom: 3px solid #b03a2e; border-right: 3px solid #b03a2e; }
 #equality-popup, #replay-popup { background-color: #3498db; }
 #equality-popup a, #replay-popup a { background-color: #296d9b; border-bottom: 3px solid #1f5579; border-right: 3px solid #1f5579; }
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 500px) {
+
+	h1 { font-size: 50px; user-select: none; }
+	p { font-size: 18px; user-select: none; }
+	.tictactoe { width: 300px; }
+
+	.case {
+		width: 100px; height: 100px;
+		line-height: 100px;
+	}
+
+	.popup { top: -300px; }
+
+}
