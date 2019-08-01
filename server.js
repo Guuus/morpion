@@ -6,7 +6,9 @@ var app = http.createServer((req, res) => {
     res.end();
 });
 
-app.listen(8080);
+app.listen(8080, () => {
+    console.log('Server running on port 8080');
+});
 
 const io = require('socket.io').listen(app);
 
@@ -15,12 +17,17 @@ var players = [];
 // Detect connection to socket.io
 io.sockets.on('connection', socket => {
 
+    // Add the player into the array after the connexion
     if (players.length == 0) {
         players.push("player1");
         socket.emit("connection", "player1");
-    } else if (players.length == 1) {
+    } else if (players.length == 1 && players[0] != "player2") {
         players.push("player2");
         socket.emit("connection", "player2");
+        io.emit("setReady");
+    } else {
+        players.unshift("player1");
+        socket.emit("connection", "player1");
         io.emit("setReady");
     }
 
@@ -48,11 +55,8 @@ io.sockets.on('connection', socket => {
     });
 
     // Delete the player of the array when he disconnects
-    // TODO: improve this function
-    socket.on('disconnect', () => {
-        if (players.length > 1) {
-            players = [];
-        }
+    socket.on('clientDisconnect', (client) => {
+        players.splice(players.indexOf(client), 1);
     });
 
 });

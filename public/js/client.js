@@ -15,6 +15,10 @@ socket.on('connection', clientName => {
     }
 });
 
+window.addEventListener('beforeunload', () => {
+    socket.emit('clientDisconnect', client);
+});
+
 // Change the player paragraph when both players are connected
 socket.on('setReady',() => {
     document.getElementById("player").textContent = "It's up to player 1 to start";
